@@ -1,0 +1,199 @@
+{
+  "version": "1.0",
+  "description": "RAVENX AI Phase 7 Precision Intelligence Ground Truth Benchmark Dataset",
+  "test_documents": [
+    "synthetic_test_doc.pdf",
+    "synthetic_test_doc.docx",
+    "synthetic_test_doc.pptx"
+  ],
+  "defects": [
+    {
+      "id": "DEF-001",
+      "category": "micro_typography",
+      "defect_type": "missing_space",
+      "description": "Missing space between words 'andthe'",
+      "original_text": "andthe",
+      "expected_correction": "and the",
+      "is_actionable": true,
+      "page_or_slide": 1
+    },
+    {
+      "id": "DEF-002",
+      "category": "micro_typography",
+      "defect_type": "missing_space",
+      "description": "Missing space between words 'inaccordance'",
+      "original_text": "inaccordance",
+      "expected_correction": "in accordance",
+      "is_actionable": true,
+      "page_or_slide": 1
+    },
+    {
+      "id": "DEF-003",
+      "category": "micro_typography",
+      "defect_type": "excessive_spaces",
+      "description": "Excessive 4 consecutive spaces between words",
+      "original_text": "Operations    Leadership",
+      "expected_correction": "Operations Leadership",
+      "is_actionable": true,
+      "page_or_slide": 1
+    },
+    {
+      "id": "DEF-004",
+      "category": "micro_typography",
+      "defect_type": "repeated_word",
+      "description": "Consecutive duplicate word 'improve improve'",
+      "original_text": "improve improve",
+      "expected_correction": "improve",
+      "is_actionable": true,
+      "page_or_slide": 2
+    },
+    {
+      "id": "DEF-005",
+      "category": "micro_typography",
+      "defect_type": "punctuation_space",
+      "description": "Unnecessary space before comma",
+      "original_text": "performance ,",
+      "expected_correction": "performance,",
+      "is_actionable": true,
+      "page_or_slide": 1
+    },
+    {
+      "id": "DEF-006",
+      "category": "micro_typography",
+      "defect_type": "repeated_punctuation",
+      "description": "Repeated commas ',,'",
+      "original_text": ",,",
+      "expected_correction": ",",
+      "is_actionable": true,
+      "page_or_slide": 2
+    },
+    {
+      "id": "DEF-007",
+      "category": "micro_typography",
+      "defect_type": "spelling",
+      "description": "High-frequency misspelling 'definately'",
+      "original_text": "definately",
+      "expected_correction": "definitely",
+      "is_actionable": true,
+      "page_or_slide": 1
+    },
+    {
+      "id": "DEF-008",
+      "category": "micro_typography",
+      "defect_type": "spelling",
+      "description": "High-frequency misspelling 'maintainance'",
+      "original_text": "maintainance",
+      "expected_correction": "maintenance",
+      "is_actionable": true,
+      "page_or_slide": 2
+    },
+    {
+      "id": "DEF-009",
+      "category": "micro_typography",
+      "defect_type": "capitalization",
+      "description": "Irregular mid-word camelCase in 'DocuMent'",
+      "original_text": "DocuMent",
+      "expected_correction": "Document",
+      "is_actionable": true,
+      "page_or_slide": 1
+    },
+    {
+      "id": "DEF-010",
+      "category": "grammar",
+      "defect_type": "subject_verb_agreement",
+      "description": "Plural subject with singular verb 'all regional teams was'",
+      "original_text": "all regional teams was",
+      "expected_correction": "all regional teams were",
+      "is_actionable": true,
+      "page_or_slide": 1
+    },
+    {
+      "id": "DEF-011",
+      "category": "grammar",
+      "defect_type": "subject_verb_agreement",
+      "description": "Singular subject with plural verb 'each regional lead are'",
+      "original_text": "each regional lead are",
+      "expected_correction": "each regional lead is",
+      "is_actionable": true,
+      "page_or_slide": 2
+    },
+    {
+      "id": "DEF-012",
+      "category": "table_arithmetic",
+      "defect_type": "arithmetic_sum_mismatch",
+      "description": "Table total discrepancy in Installations column: 52 + 41 + 35 = 128 vs stated 138",
+      "original_text": "138",
+      "expected_correction": "128",
+      "is_actionable": true,
+      "page_or_slide": 1
+    },
+    {
+      "id": "DEF-013",
+      "category": "consistency",
+      "defect_type": "chronological_contradiction",
+      "description": "Approval date (12 June 2026) precedes review completion date (30 June 2026)",
+      "original_text": "12 June 2026",
+      "expected_correction": "30 June 2026",
+      "is_actionable": true,
+      "page_or_slide": 2
+    },
+    {
+      "id": "DEF-014",
+      "category": "entity_consistency",
+      "defect_type": "organization_drift",
+      "description": "Organization styled as 'North Star Office Systems' vs majority 'Northstar Office Systems'",
+      "original_text": "North Star Office Systems",
+      "expected_correction": "Northstar Office Systems",
+      "is_actionable": true,
+      "page_or_slide": 2
+    },
+    {
+      "id": "DEF-015",
+      "category": "structural",
+      "defect_type": "broken_section_sequence",
+      "description": "Section numbering jumps from Section 2 to Section 4, skipping Section 3",
+      "original_text": "Section 4. Risk and Follow-up Actions",
+      "expected_correction": "Section 3. Risk and Follow-up Actions",
+      "is_actionable": false,
+      "page_or_slide": 2
+    }
+  ],
+  "negative_test_cases": [
+    {
+      "id": "NEG-001",
+      "description": "Alphanumeric security token 'SHA256' must NOT be flagged as missing space",
+      "text": "SHA256",
+      "expected_flagged": false
+    },
+    {
+      "id": "NEG-002",
+      "description": "Quality standard 'ISO9001' must NOT be flagged as missing space",
+      "text": "ISO9001",
+      "expected_flagged": false
+    },
+    {
+      "id": "NEG-003",
+      "description": "Aircraft model 'Boeing747' must NOT be flagged as missing space",
+      "text": "Boeing747",
+      "expected_flagged": false
+    },
+    {
+      "id": "NEG-004",
+      "description": "Standard clause token 'Clause1' must NOT be flagged",
+      "text": "Clause1",
+      "expected_flagged": false
+    },
+    {
+      "id": "NEG-005",
+      "description": "Accurate Late Jobs arithmetic sum (6 + 5 + 6 = 17 vs stated 17) must NOT be flagged",
+      "text": "17",
+      "expected_flagged": false
+    },
+    {
+      "id": "NEG-006",
+      "description": "Proper A4 page footer within valid margins must NOT be flagged as text overflow",
+      "text": "NORTHSTAR OFFICE SYSTEMS | INTERNAL REVIEW COPY Page 1",
+      "expected_flagged": false
+    }
+  ]
+}

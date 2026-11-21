@@ -1,0 +1,163 @@
+{
+  "version": "2.0",
+  "description": "RAVENX AI Phase 8 Real-World Accuracy Engine Ground Truth Benchmark Dataset",
+  "documents": {
+    "business_financial_report.pdf": {
+      "format": "pdf",
+      "type": "positive",
+      "pages": 3,
+      "defects": [
+        {
+          "id": "BFR-001",
+          "category": "micro_typography",
+          "defect_type": "concatenated_words",
+          "original_text": "werealigned",
+          "expected_correction": "were aligned",
+          "page": 1,
+          "is_actionable": true
+        },
+        {
+          "id": "BFR-002",
+          "category": "micro_typography",
+          "defect_type": "split_word",
+          "original_text": "oper ation",
+          "expected_correction": "operation",
+          "page": 1,
+          "is_actionable": true
+        },
+        {
+          "id": "BFR-003",
+          "category": "micro_typography",
+          "defect_type": "punctuation_space",
+          "original_text": "Quarterly Performance ,",
+          "expected_correction": "Quarterly Performance,",
+          "page": 1,
+          "is_actionable": true
+        },
+        {
+          "id": "BFR-004",
+          "category": "micro_typography",
+          "defect_type": "standalone_i",
+          "original_text": "as i highlighted",
+          "expected_correction": "as I highlighted",
+          "page": 1,
+          "is_actionable": true
+        },
+        {
+          "id": "BFR-005",
+          "category": "table_arithmetic",
+          "defect_type": "sum_discrepancy",
+          "original_text": "Total Expenses: \u20b980,000",
+          "expected_correction": "Total Expenses: \u20b970,000",
+          "page": 2,
+          "is_actionable": true
+        },
+        {
+          "id": "BFR-006",
+          "category": "entity_consistency",
+          "defect_type": "organization_drift",
+          "original_text": "Apex Globel Ltd",
+          "expected_correction": "Apex Global Ltd",
+          "page": 3,
+          "is_actionable": true
+        }
+      ]
+    },
+    "academic_college_project.docx": {
+      "format": "docx",
+      "type": "positive",
+      "pages": 1,
+      "defects": [
+        {
+          "id": "ACP-001",
+          "category": "micro_typography",
+          "defect_type": "split_word",
+          "original_text": "Docum ent",
+          "expected_correction": "Document",
+          "is_actionable": true
+        },
+        {
+          "id": "ACP-002",
+          "category": "grammar",
+          "defect_type": "double_comparative",
+          "original_text": "more better",
+          "expected_correction": "better",
+          "is_actionable": true
+        },
+        {
+          "id": "ACP-003",
+          "category": "grammar",
+          "defect_type": "missing_apostrophe",
+          "original_text": "dont",
+          "expected_correction": "don't",
+          "is_actionable": true
+        },
+        {
+          "id": "ACP-004",
+          "category": "micro_typography",
+          "defect_type": "repeated_word",
+          "original_text": "the the",
+          "expected_correction": "the",
+          "is_actionable": true
+        },
+        {
+          "id": "ACP-005",
+          "category": "spelling",
+          "defect_type": "misspelling",
+          "original_text": "definately",
+          "expected_correction": "definitely",
+          "is_actionable": true
+        }
+      ]
+    },
+    "corporate_strategy_deck.pptx": {
+      "format": "pptx",
+      "type": "positive",
+      "slides": 3,
+      "defects": [
+        {
+          "id": "CSD-001",
+          "category": "micro_typography",
+          "defect_type": "excessive_spaces",
+          "original_text": "Market    Expansion",
+          "expected_correction": "Market Expansion",
+          "slide": 1,
+          "is_actionable": true
+        },
+        {
+          "id": "CSD-002",
+          "category": "grammar",
+          "defect_type": "repeated_phrase",
+          "original_text": "in order to in order to",
+          "expected_correction": "in order to",
+          "slide": 2,
+          "is_actionable": true
+        },
+        {
+          "id": "CSD-003",
+          "category": "micro_typography",
+          "defect_type": "concatenated_words",
+          "original_text": "hasbeen",
+          "expected_correction": "has been",
+          "slide": 2,
+          "is_actionable": true
+        },
+        {
+          "id": "CSD-004",
+          "category": "micro_typography",
+          "defect_type": "split_word",
+          "original_text": "strat egy",
+          "expected_correction": "strategy",
+          "slide": 3,
+          "is_actionable": true
+        }
+      ]
+    },
+    "clean_perfect_document.pdf": {
+      "format": "pdf",
+      "type": "negative",
+      "pages": 2,
+      "defects": []
+    }
+  }
+}
